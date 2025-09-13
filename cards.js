@@ -4,6 +4,8 @@ var cards=[
 ]
 var cardSet;
 var board=[];
+var rows=4;
+var columns=5;
 
 window.onload=function(){
     shuffleCards();
@@ -29,10 +31,20 @@ function startGame(){
 
             let card=document.createElement("img");
             card.id=r.toString()+"-"+c.toString();
-            card.src=cardImage+".jpg";
+            card.src= "images/"+cardImage+".png";
             card.classList.add("card");
             document.getElementById("board").append(card);
         }
         board.push(row);
+    }
+    console.log(board);
+   setTimeout(hideCards,1000);
+}
+function hideCards(){
+    for(let r=0;r<rows;r++){
+        for(let c=0;c<columns;c++){
+            let card=document.getElementById(r.toString()+"-"+c.toString());
+            card.src="fairy.jpg";
+        }
     }
 }
