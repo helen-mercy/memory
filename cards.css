@@ -1,5 +1,11 @@
 body{
-    font-family:tagesschrift ;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+     margin: 0;
+     font-family:tagesschrift ;
     text-align: center;
 }
 .tagesschrift-regular {
@@ -13,9 +19,8 @@ body{
    margin: 0 auto;
    display: flex;
    flex-wrap: wrap;
-   background-color: aliceblue;
-   border: 10px solid lightpink;
-}
+   background-color:transparent;
+  }
 .card{
     height: 128px;
     width: 90px;

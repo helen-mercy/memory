@@ -71,3 +71,16 @@ function select(){
         }
     }
 }
+function update(){
+    if(card1Select.src!=card2Select.src){
+        card1Select.src="fairy.jpg";
+        card2Select.src="fairy.jpg";
+        
+    }
+    else{
+        score+=1;
+        document.getElementById("score").innerText=score;
+    }
+    card1Select=null;
+    card2Select=null;
+}
