@@ -1,6 +1,6 @@
 var score=0;
 var cards=[
-    "A","E","F" ,"H","K","R","T","X","Y","Z"
+    "A","E","B" ,"H","K","R","T","X","Y","Z"
 ]
 var cardSet;
 var board=[];
@@ -32,7 +32,7 @@ function startGame(){
             row.push(cardImage);
             let card=document.createElement("img");
             card.id=r.toString()+"-"+c.toString();
-            card.src= "images/"+cardImage+".png";
+            card.src= "images/"+cardImage+".jpg";
             card.classList.add("card");
               card.addEventListener("click", select);
             document.getElementById("board").append(card);
@@ -58,7 +58,7 @@ function select(){
             let r=parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card1Select.src= "images/"+board[r][c]+".png"
+            card1Select.src= "images/"+board[r][c]+".jpg"
         }
         else if(!card2Select&&this!=card1Select){
             card2Select=this;
@@ -66,7 +66,7 @@ function select(){
             let r=parseInt(coords[0]);
             let c=parseInt(coords[1]);
 
-            card2Select.src="images/"+board[r][c] + ".png";
+            card2Select.src="images/"+board[r][c] + ".jpg";
             setTimeout(update,1000);
         }
     }

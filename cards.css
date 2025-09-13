@@ -15,14 +15,20 @@ body{
 }
 #board{
     height: 532px;
-    width: 475px;
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   background-color:transparent;
+    width: 495px;
+    margin: 0 auto;
+    gap: 15px;
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+    background-color:transparent;
   }
 .card{
-    height: 128px;
-    width: 90px;
-    margin:2.5px;
+    height: 125px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+h2{
+    color: rgb(104, 23, 181);
+    font-size: 62px;
 }
