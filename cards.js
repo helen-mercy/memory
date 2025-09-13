@@ -6,6 +6,8 @@ var cardSet;
 var board=[];
 var rows=4;
 var columns=5;
+var card1Select;
+var card2Select;
 
 window.onload=function(){
     shuffleCards();
@@ -28,11 +30,11 @@ function startGame(){
         for(let c=0;c<columns;c++){
             let cardImage =cardSet.pop();
             row.push(cardImage);
-
             let card=document.createElement("img");
             card.id=r.toString()+"-"+c.toString();
             card.src= "images/"+cardImage+".png";
             card.classList.add("card");
+              card.addEventListener("click", select);
             document.getElementById("board").append(card);
         }
         board.push(row);
@@ -45,6 +47,27 @@ function hideCards(){
         for(let c=0;c<columns;c++){
             let card=document.getElementById(r.toString()+"-"+c.toString());
             card.src="fairy.jpg";
+        }
+    }
+}
+function select(){
+    if (this.src.includes("fairy")){
+        if(!card1Select){
+            card1Select=this;
+            let coords=card1Select.id.split("-");
+            let r=parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            card1Select.src= "images/"+board[r][c]+".png"
+        }
+        else if(!card2Select&&this!=card1Select){
+            card2Select=this;
+            let coords=card2Select.id.split("-");
+            let r=parseInt(coords[0]);
+            let c=parseInt(coords[1]);
+
+            card2Select.src="images/"+board[r][c] + ".png";
+            setTimeout(update,1000);
         }
     }
 }
