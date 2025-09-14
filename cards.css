@@ -35,10 +35,10 @@ h2{
     margin: 0;
    }
    .scoreb{
-    background: rgba(36, 165, 179, 0.2);
+    background: rgba(4, 212, 236, 0.2);
     border-radius: 4px;
     padding: 2px;
     display: inline-block;
-    border: 1px solid aliceblue;
+    border: 2px solid rgb(91, 24, 168);
     margin-bottom: 10px;
    }
