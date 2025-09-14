@@ -7,6 +7,7 @@ body{
      margin: 0;
      font-family:tagesschrift ;
     text-align: center;
+    margin-top: 80px;
 }
 .tagesschrift-regular {
   font-family: "Tagesschrift", system-ui;
@@ -14,7 +15,7 @@ body{
   font-style: normal;
 }
 #board{
-    height: 532px;
+     height: 532px;
     width: 495px;
     margin: 0 auto;
     gap: 15px;
@@ -31,4 +32,13 @@ body{
 h2{
     color: rgb(104, 23, 181);
     font-size: 62px;
+    margin: 0;
+   }
+   .scoreb{
+    background: rgba(36, 165, 179, 0.2);
+    border-radius: 4px;
+    padding: 2px;
+    display: inline-block;
+    border: 1px solid aliceblue;
+    margin-bottom: 10px;
    }
