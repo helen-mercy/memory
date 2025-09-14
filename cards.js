@@ -40,7 +40,7 @@ function startGame(){
         board.push(row);
     }
     console.log(board);
-   setTimeout(hideCards,1000);
+   setTimeout(hideCards,2000);
 }
 function hideCards(){
     for(let r=0;r<rows;r++){
